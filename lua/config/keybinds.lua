@@ -19,7 +19,8 @@ local function toggle_terminal()
     vim.api.nvim_win_close(term_win, true)
   else
     -- Open a horizontal split in the CURRENT working directory
-    vim.cmd("split")
+    vim.cmd("botright split")
+    vim.api.nvim_win_set_height(0, 15)
     local new_win = vim.api.nvim_get_current_win()
     
     -- Reuse existing buffer or spawn a new terminal shell
