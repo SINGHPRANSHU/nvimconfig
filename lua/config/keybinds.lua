@@ -52,3 +52,5 @@ vim.api.nvim_create_autocmd({ "BufEnter", "WinEnter" }, {
     vim.cmd("startinsert")
   end,
 })
+
+vim.opt.clipboard = "unnamedplus"
